@@ -1,0 +1,103 @@
+###Obtener todos los empleados
+GET http://localhost:3100/api/empleados HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyMjgzN2M0YzU1NGUzNmRiZjQ0OWJiZCIsIm5hbWUiOiJKYWltZSBJdsOhbiBMw7NwZXogVmV5bmEiLCJlbWFpbCI6Iml2YW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkTlRQejZrUFpMektWMVEyRUlTb3V2dWJtUHRKM3FQVzRlYWVGZ3NBUnovTmJ3bDEuUGM0c1ciLCJ0aXBvIjoiMCIsIl9fdiI6MH0sImlhdCI6MTY1MzMyNjUyNiwiZXhwIjoxNjUzMzMwMTI2fQ.VXy_9Rcz5-rlP-8w5nAoO6ENkLs3B8HieMfdh-j2KAM
+
+###Insertar un empleado
+POST http://localhost:3100/api/empleados HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Armando Broncas",
+    "puesto": "Developer Master",
+    "departamento": "Development",
+    "salario": 34000
+}
+
+###Consultar un empleado por id
+GET http://localhost:3100/api/empleados/62224b126da12dd15e19dc6f HTTP/1.1
+Content-Type: application/json
+
+###Modificar un empleado
+PUT http://localhost:3100/api/empleados/62224b126da12dd15e19dc6f HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Pedro Paramo Modificado",
+    "puesto": "Developer Master Mod",
+    "departamento": "Development Mod",
+    "salario": 36000
+}
+
+###Eliminar un empleado
+DELETE http://localhost:3100/api/empleados/62263e80bcdb90ef0d92a841 HTTP/1.1
+Content-Type: application/json
+
+
+###Consultar todos los Usuarios
+GET http://localhost:3100/api/users HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyOWZmZWU5YTE5ZmYxZDc3MzdhYjkxOSIsIm5hbWUiOiJDaHJpc3RpYW4gQXRhbGFzIiwiZW1haWwiOiJzYW50aWxsYW4uc2lsdmFAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkUnZMV0gwbWFjSGlhbTdteDB0ZWswZVFFTVhnNmd4ZjJDMlRCbi9qQVFsWG1QeWlxejlNTXkiLCJ0aXBvIjoiMCJ9LCJpYXQiOjE2NTUyMjQ0MjIsImV4cCI6MTY1NTIyODAyMn0.WrxRjwV-pc7iv2DV9eRKpEoCBBUCZ8sWZdu8rYeWDd8
+
+###Crear un usuario
+POST http://localhost:3100/api/users HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyYWE4NGI4MWUxMjYyYjkzNTRiN2NhZCIsIm5hbWUiOiJEYXZpZCBWaWxsYWdyYW5hIiwiZW1haWwiOiJkYXZpZDF2aWxsYWdyYW5hMUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCQuc09zMEJCSmZlSVVULzMzNXM3T2NPRG5rOFBGOTl6dWlNMWpGQ2VRa2gxcEI2SVdKUnB5NiIsInRpcG8iOiIxIiwiX192IjowfSwiaWF0IjoxNjU1NjE1MTM2LCJleHAiOjE2NTU2MTg3MzZ9.iIA1xZ0XAelcY8gAa8RJG7ZuWuhzr2RVXaOFJ26XhwA
+{
+    "name": "David Villagrana",
+    "email": "david1villagrana1@gmail.com",
+    "password": "654321David",
+    "tipo": 0
+}
+
+###Usuarios
+GET http://localhost:3100/api/users HTTP/1.1
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyYWE4NGI4MWUxMjYyYjkzNTRiN2NhZCIsIm5hbWUiOiJEYXZpZCBWaWxsYWdyYW5hIiwiZW1haWwiOiJkYXZpZDF2aWxsYWdyYW5hMUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCQuc09zMEJCSmZlSVVULzMzNXM3T2NPRG5rOFBGOTl6dWlNMWpGQ2VRa2gxcEI2SVdKUnB5NiIsInRpcG8iOiIxIiwiX192IjowfSwiaWF0IjoxNjU1NjYyODQ2LCJleHAiOjE2NTU2NjY0NDZ9.vpdTgGUhQdVcNY9iAf5jZggbEWolge88E71nf7AM0_0
+
+###Autenticar Usuario
+POST http://localhost:3100/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "david1villagrana1@gmail.com",
+    "password": "654321David"
+    //"email": "santillan.silva@gmail.com",
+    //"password": "Chris123"
+}
+
+
+
+###Consultar un ID
+GET http://localhost:3100/api/users/628fc07df675e587cf839f3f HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyOGZjMTQ0Yzc5NWYzMjFjYjY0YTBmZCIsIm5hbWUiOiJDaHJpc3RpYW5TMTIiLCJlbWFpbCI6InNhbnRpbGxhbi5zaWx2YS5jaHJpc3RpYW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkeHJSeEdNWE1nMHM3ZUlPM0cvWkxxT2VlV1hXbVZpTXFkZFRYNjIvZi9aamF5azd4WVN0bC4iLCJfX3YiOjB9LCJpYXQiOjE2NTM1OTEzMTgsImV4cCI6MTY1MzU5NDkxOH0.O5n0l_yYpADs5epFM1RfKJB26SMTLeot67-y8WgtBR4
+
+###Eliminar un usuario por Id
+DELETE http://localhost:3100/api/users/629ffee9a19ff1d7737ab919 HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyOGZjMTQ0Yzc5NWYzMjFjYjY0YTBmZCIsIm5hbWUiOiJDaHJpc3RpYW5TMTIiLCJlbWFpbCI6InNhbnRpbGxhbi5zaWx2YS5jaHJpc3RpYW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkeHJSeEdNWE1nMHM3ZUlPM0cvWkxxT2VlV1hXbVZpTXFkZFRYNjIvZi9aamF5azd4WVN0bC4iLCJfX3YiOjB9LCJpYXQiOjE2NTM1OTEzMTgsImV4cCI6MTY1MzU5NDkxOH0.O5n0l_yYpADs5epFM1RfKJB26SMTLeot67-y8WgtBR4
+
+###Crear otro usuario
+POST http://localhost:3100/api/users HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyOGZjMTQ0Yzc5NWYzMjFjYjY0YTBmZCIsIm5hbWUiOiJDaHJpc3RpYW5TMTIiLCJlbWFpbCI6InNhbnRpbGxhbi5zaWx2YS5jaHJpc3RpYW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkeHJSeEdNWE1nMHM3ZUlPM0cvWkxxT2VlV1hXbVZpTXFkZFRYNjIvZi9aamF5azd4WVN0bC4iLCJfX3YiOjB9LCJpYXQiOjE2NTM1OTEzMTgsImV4cCI6MTY1MzU5NDkxOH0.O5n0l_yYpADs5epFM1RfKJB26SMTLeot67-y8WgtBR4
+
+{
+"name": "Beto Silva",
+"email": "betos3524@gmail.com",
+"password": "Beto123",
+"tipo": 1
+}
+
+###Actualizar usuario
+PUT http://localhost:3100/api/users/628fd025c1e777c04c357dab
+Content-Type: application/json
+Authorization: token-auth /eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyOGZkN2QwYzFlNzc3YzA0YzM1N2RiMyIsIm5hbWUiOiJCZXRvIFMgU2lsdmEiLCJlbWFpbCI6ImJldG9zMzUyNDU1NkBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCQxTGJueHMua3BQMkZwRFpTQ3pvd0NlYWZGV1p4VlF5UGNiM1ptVXJTQ1dTOENpLzRtb3Z4eSIsInRpcG8iOiIxIiwiX192IjowfSwiaWF0IjoxNjUzNzk1NDkxLCJleHAiOjE2NTM3OTkwOTF9.7WMYSh-3UY1lYQGCvwyJnlGsFA_RANIigqguMhC9s2k
+
+{
+"name": "Jaime ",
+"email": "jaimeivanlopezveyna@zacatecas.tecnm.mx",
+"password": "Jaime123",
+"tipo": 1
+}
